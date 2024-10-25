@@ -28,6 +28,8 @@ body {
     height: 75px;
     padding: 0 10px;
     background-color: var(--dark-bg);
+    width: 100%;
+    position: relative;
 }
 
 .layout {
@@ -39,7 +41,7 @@ body {
 }
 
 .header__menu {
-    /* margin-right: 0 10px 0px 30px; */
+    margin-right: 20px;
 }
 
 .header__icon-wrapper {
@@ -98,10 +100,15 @@ body {
     border-radius: 5px;
 }
 
+.header__search-icon-container {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
 .header__search-icon {
-    /* width: 16px;
-    height: 16px; */
-    padding: 5px;
+    width: 16px;
+    height: 16px;
 }
 
 .header__search-input {
@@ -140,17 +147,13 @@ body {
     align-items: center;
 }
 
-.header-actions__item {
-    /* margin-left: 16px; */
-}
+.header-actions__item {}
 
 .btn-dropdown {
     color: var(--text-color);
 }
 
 .btn-icon {
-    /* width: 32px;
-    height: 32px; */
     padding: 10px;
     border-radius: 8px;
 }
@@ -162,4 +165,57 @@ body {
 .header__button img {
     width: 24px;
     height: 24px;
+}
+
+@media (max-width: 1280px) {
+    .header__logo-img {
+        max-height: 50px;
+        content: url('img/header/mini-logo.svg');
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__button--catalog {
+        display: none;
+    }
+    .header-actions__item-language {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__search-button {
+        display: none;
+    }
+    .btn-icon--account {
+        display: none;
+    }
+    .header {
+        padding: 0 5px;
+        /* Adjust padding */
+    }
+    .header__menu {
+        margin-right: 10px;
+        /* Reduce margin */
+    }
+    .header__icon-wrapper {
+        padding: 8px;
+        /* Reduce padding */
+    }
+    .header__logo {
+        margin-right: 20px;
+        /* Reduce margin */
+    }
+    .header-search {
+        margin: 0 10px;
+        /* Reduce margin */
+    }
+    .header__search-container {
+        margin-right: 10px;
+        /* Reduce margin */
+    }
+    .header__button {
+        margin-right: 10px;
+        /* Reduce margin */
+    }
 }
