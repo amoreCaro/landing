@@ -62,6 +62,7 @@
         </div>
     </header>
 
+
     <div class="modal" id="modal">
         <div class="inner__modal">
             <div class="modal__header">
@@ -70,21 +71,22 @@
             </div>
             <hr class="divider-line" />
             <div class="modal__content">
-                <div class="modal__input-container">
-                    <span class="modal__input-prefix">+38</span>
-                    <input class="modal__input" type="text" placeholder="Ваш номер" />
+                <div class="phone-input">
+                    <label class="phone-input__label" for="phone">Телефон</label>
+                    <input id="phone" class="phone-input__field" type="text" placeholder="Ваш номер" />
                 </div>
+
                 <button class="modal__button btn btn--primary btn--medium">Продовжити</button>
                 <div class="divider">
                     <span class="divider__text">або</span>
                 </div>
 
                 <div class="modal__button-group">
-                    <button class="modal__button modal__button--link btn--with--icon">
+                    <button class="modal__button button--gray btn--with--icon">
                         <img class="modal__button-icon" src="img/google-logo.png" width="24px" height="24px" alt="Google" />
                         Google
                     </button>
-                    <button class="modal__button modal__button--link btn--with--icon">
+                    <button class="modal__button button--gray btn--with--icon">
                         <img class="modal__button-icon" src="img/apple-logo.png" width="24px" height="24px" alt="Apple" />
                         Apple
                     </button>
@@ -95,6 +97,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="index.js"></script>
