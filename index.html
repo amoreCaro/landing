@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
@@ -14,27 +14,33 @@
         <div class="layout">
             <div class="header__menu">
                 <div class="header__icon-wrapper">
-                    <img class="header__icon btn--default" src="img/header/menu-white.svg" alt="Menu">
+                    <img class="header__icon btn--default" src="img/header/menu-white.svg" alt="Menu" />
                 </div>
             </div>
             <a class="header__logo" href="#">
-                <img class="header__logo-img" src="img/header/rozetka__logo.svg" alt="Logo">
+                <img class="header__logo-img" src="img/header/rozetka__logo.svg" alt="Logo" />
             </a>
             <button class="header__button btn header__button--catalog">
-                <img class="header__button-img" src="img/header/catalog-white.svg" alt="Catalog">
-                Каталог
-            </button>
+          <img
+            class="header__button-img"
+            src="img/header/catalog-white.svg"
+            alt="Catalog"
+          />
+          Каталог
+        </button>
             <div class="header-search">
                 <form class="search-form" action="">
                     <div class="header__search-container">
                         <div class="header__search-icon-container">
-                            <img src="img/header/search-black.svg" alt="Search" class="header__search-icon">
+                            <img src="img/header/search-black.svg" alt="Search" class="header__search-icon" />
                         </div>
-                        <input class="header__search-input" type="text" placeholder="Я шукаю...">
+                        <input class="header__search-input" type="text" placeholder="Я шукаю..." />
                         <div class="header__search-icon-container">
-                            <img src="img/header/mic.svg" alt="Microphone" class="header__search-icon">
+                            <img src="img/header/mic.svg" alt="Microphone" class="header__search-icon" />
                         </div>
-                        <button class="header__search-button btn btn--primary btn--medium search-form__submit" type="submit">Знайти</button>
+                        <button class="header__search-button btn btn--primary btn--medium search-form__submit" type="submit">
+                Знайти
+              </button>
                     </div>
                 </form>
             </div>
@@ -43,75 +49,55 @@
                 <div class="header-actions__item header-actions__item-language">
                     <div class="header__button btn btn-dropdown">
                         UA
-                        <img src="img/header/arrow_down-white.svg" alt="Dropdown">
+                        <img src="img/header/arrow_down-white.svg" alt="Dropdown" />
                     </div>
                 </div>
-                <div class="header__button btn btn-icon btn--default btn-icon--account" id="openModalBtn">
-                    <img src="img/header/person-white.svg" alt="Account">
+                <div id="openModalBtn" class="header__button btn btn-icon btn--default btn-icon--account">
+                    <img src="img/header/person-white.svg" alt="Account" />
                 </div>
                 <div class="header__button btn btn-icon btn--default btn-icon--cart">
-                    <img src="img/header/shopping_cart-white.svg" alt="Cart">
+                    <img src="img/header/shopping_cart-white.svg" alt="Cart" />
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="modal">
-        <div class="modal__header">
-            <h2 class="modal__title">Вхід</h2>
-            <img class="modal__close-btn" src="img/close-icon.svg" alt="">
-        </div>
-        <hr class="divider-line" />
-        <div class="modal__content">
-            <div class="modal__input-container">
-                <span class="modal__input-prefix">+38</span>
-                <input class="modal__input" type="text" placeholder="Ваш номер">
+    <div class="modal" id="modal">
+        <div class="inner__modal">
+            <div class="modal__header">
+                <h2 class="modal__title">Вхід</h2>
+                <img id="closeModalBtn" class="modal__close-btn" src="img/close-icon.svg" alt="Close" />
             </div>
-            <button class="modal__button btn btn--primary btn--medium">Продовжити</button>
-            <div class="divider">
-                <span class="divider__text">або</span>
-            </div>
+            <hr class="divider-line" />
+            <div class="modal__content">
+                <div class="modal__input-container">
+                    <span class="modal__input-prefix">+38</span>
+                    <input class="modal__input" type="text" placeholder="Ваш номер" />
+                </div>
+                <button class="modal__button btn btn--primary btn--medium">Продовжити</button>
+                <div class="divider">
+                    <span class="divider__text">або</span>
+                </div>
 
-            <div class="modal__button-group">
-                <button class="modal__button modal__button--link btn--with--icon ">
-                    <img class="modal__button-icon" src="img/google-logo.png" width="24px" height="24px" alt="">
-                    Google
-                </button>
-                <button class="modal__button modal__button--link btn--with--icon">
-                    <img class="modal__button-icon" src="img/apple-logo.png" width="24px" height="24px" alt="">
-                    Apple
-                </button>
-            </div>
+                <div class="modal__button-group">
+                    <button class="modal__button modal__button--link btn--with--icon">
+                        <img class="modal__button-icon" src="img/google-logo.png" width="24px" height="24px" alt="Google" />
+                        Google
+                    </button>
+                    <button class="modal__button modal__button--link btn--with--icon">
+                        <img class="modal__button-icon" src="img/apple-logo.png" width="24px" height="24px" alt="Apple" />
+                        Apple
+                    </button>
+                </div>
 
-            <a class="btn--link modal__link--facebook" href="">Увійти через Facebook</a>
-            <a class="btn--link modal__link--email" href="">Увійти через пошту</a>
+                <a class="btn--link modal__link--facebook" href="">Увійти через Facebook</a>
+                <a class="btn--link modal__link--email" href="">Увійти через пошту</a>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Get modal and buttons
-        const modal = document.getElementById("odal");
-        const openModalBtn = document.getElementById("openModalBtn");
-        const closeModalBtn = document.getElementById("closeModalBtn");
 
-        // Function to open the modal
-        openModalBtn.onclick = function() {
-            modal.style.display = "flex"; // Change display to flex to show the modal
-        }
-
-        // Function to close the modal
-        closeModalBtn.onclick = function() {
-            modal.style.display = "none"; // Change display to none to hide the modal
-        }
-
-        // Optional: Close modal when clicking outside of it
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
-
 
 </html>
