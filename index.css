@@ -137,7 +137,7 @@ body {
 .divider {
     display: flex;
     align-items: center;
-    margin: 16px 0;
+    margin: 20px 0;
 }
 
 .divider::before,
@@ -151,6 +151,7 @@ body {
     padding: 0 12px;
     font-size: 0.875rem;
     color: var(--icon-color);
+    margin-top: -12px;
 }
 
 .divider-line {
@@ -161,10 +162,9 @@ body {
 }
 
 .modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -183,7 +183,7 @@ body {
     max-width: 440px;
     width: 100%;
     background-color: var(--text-color);
-    padding: 20px 24px;
+    padding: 20px;
     z-index: 1000;
     text-align: center;
     display: flex;
@@ -217,7 +217,7 @@ body {
     width: 100%;
     padding: 0 16px;
     box-sizing: border-box;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .phone__input-container {
@@ -229,7 +229,7 @@ body {
 
 .phone-input {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
 .phone-input__label {
@@ -263,13 +263,14 @@ body {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
+    margin-top: -12px;
 }
 
 .modal__button-group {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     width: 100%;
 }
 
@@ -321,10 +322,11 @@ body {
 }
 
 .btn--link {
-    background-color: transparent;
-    font-weight: bold;
+    margin-top: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: var(--link-color);
+    height: 40px;
 }
 
 .modal__button-icon {
