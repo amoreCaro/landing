@@ -348,6 +348,69 @@ body {
     height: 24px;
 }
 
+
+/* Products */
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* Space between the product cards */
+}
+
+.product-card {
+    background-color: #f8f8f8;
+    /* Light background for product cards */
+    border: 1px solid #ddd;
+    /* Border around the card */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    padding: 16px;
+    /* Inner padding for the card */
+    flex: 1 1 calc(100% / 6 - 16px);
+    /* 6 columns by default */
+    box-sizing: border-box;
+    /* Include padding and border in width calculations */
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 1200px) {
+    .product-card {
+        flex: 1 1 calc(100% / 5 - 16px);
+        /* 5 columns */
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        flex: 1 1 calc(100% / 4 - 16px);
+        /* 4 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(100% / 3 - 16px);
+        /* 3 columns */
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        flex: 1 1 calc(100% / 2 - 16px);
+        /* 2 columns */
+    }
+}
+
+@media (max-width: 400px) {
+    .product-card {
+        flex: 1 1 100%;
+        /* 1 column */
+    }
+}
+
 @media (max-width: 1280px) {
     .header__logo-img {
         max-height: 50px;
