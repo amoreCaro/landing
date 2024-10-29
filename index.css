@@ -357,7 +357,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    margin: 8px;
+    justify-content: left;
+    align-items: flex-start;
+    height: 100vh;
 }
 
 .product-card {
@@ -419,20 +421,14 @@ body {
 
 .product-card__cart-icon {
     position: absolute;
-    /* Position it absolutely */
     right: 16px;
-    /* Adjust right spacing */
     bottom: 16px;
-    /* Position at the bottom */
     cursor: pointer;
-    /* Change cursor to pointer on hover */
 }
 
 .product-card__rating-icon {
     width: 20px;
-    /* Icon size */
     margin-right: 2px;
-    /* Space between stars */
 }
 
 
