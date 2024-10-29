@@ -11,7 +11,9 @@
     --placeholder-color: #7f7f7f;
     --link-color: #3e77aa;
     --link-hover-color: #ff7878;
+    --color-red: #f84147;
     --divider-color: #e9e9e9;
+    --yellow-color: #ffa900;
 }
 
 * {
@@ -163,7 +165,7 @@ body {
 }
 
 .modal {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -355,22 +357,82 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    /* Space between the product cards */
+    margin: 8px;
 }
 
 .product-card {
-    background-color: #f8f8f8;
-    /* Light background for product cards */
-    border: 1px solid #ddd;
-    /* Border around the card */
-    border-radius: 4px;
-    /* Slightly rounded corners */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     padding: 16px;
-    /* Inner padding for the card */
-    flex: 1 1 calc(100% / 6 - 16px);
-    /* 6 columns by default */
-    box-sizing: border-box;
-    /* Include padding and border in width calculations */
+    position: relative;
+}
+
+.product-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.product-card__description {
+    font-size: 14px;
+    color: var(--dark-bg);
+}
+
+.product-card__rating {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.product-card__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price-gray {
+    height: 18px;
+    color: var(--icon-color);
+    text-decoration: line-through;
+}
+
+.price-red {
+    color: var(--color-red);
+    font-size: 24px;
+}
+
+.product-card__favorite-icon {
+    width: 24px;
+    height: auto;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.product-card__image {
+    width: 250px;
+    height: 250px;
+}
+
+.product-card__cart-icon {
+    position: absolute;
+    /* Position it absolutely */
+    right: 16px;
+    /* Adjust right spacing */
+    bottom: 16px;
+    /* Position at the bottom */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+.product-card__rating-icon {
+    width: 20px;
+    /* Icon size */
+    margin-right: 2px;
+    /* Space between stars */
 }
 
 
@@ -397,10 +459,17 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 585px) {
     .product-card {
         flex: 1 1 calc(100% / 2 - 16px);
         /* 2 columns */
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        flex: 1 1 100%;
+        /* 1 column */
     }
 }
 
