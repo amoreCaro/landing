@@ -8,7 +8,6 @@ openModalBtn.onclick = function() {
     modal.style.display = "block";
 }
 
-
 closeModalBtn.onclick = function() {
     modal.style.display = "none";
 }
