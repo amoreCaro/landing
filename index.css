@@ -31,7 +31,6 @@
 
 .material-symbols-outlined {
     font-size: 24px;
-    /* Change size as needed */
 }
 
 body {
@@ -43,6 +42,18 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.h--white-icon {
+    color: var(--text-color)/* Change size as needed */
+}
+
+.h--gray-icon {
+    color: var(--icon-color);
+}
+
+.h--blue-icon {
+    color: var(--link-color);
 }
 
 .header {
@@ -127,12 +138,6 @@ body {
     display: flex;
     align-items: center;
     padding: 4px;
-}
-
-.header__search-icon {
-    width: 16px;
-    height: 16px;
-    color: red;
 }
 
 .header__search-input {
