@@ -5,6 +5,7 @@
     "target": "es6",
     "module": "es6",
     "scripts": {
+        "start": "webpack serve",
         "build:dev": "webpack --env mode=development",
         "build:prod": "webpack --env mode=production"
     },

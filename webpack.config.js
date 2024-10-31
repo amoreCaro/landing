@@ -25,5 +25,9 @@ module.exports = (env) => {
         resolve: {
             extensions: ['.ts', '.js'],
         },
+        devServer: {
+            port: 5000,
+            open: true,
+        }
     };
 };
