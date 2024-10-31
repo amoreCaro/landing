@@ -1,3 +1,6 @@
+
+import './styles/index.css'
+
 // Get the modal
 const modal = document.getElementById("modal") as HTMLDivElement;
 
