@@ -1,29 +1,29 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
     return {
-        mode: env.mode || 'development', // Задати 'development' за замовчуванням
+        mode: env.mode || 'development',
         entry: path.resolve(__dirname, 'src', 'index.ts'),
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: 'bundle.js',
-            clean: true
+            clean: true,
         },
         plugins: [
-            new HtmlWebpackPlugin(path.resolve(__dirname, 'public', 'index.html ')),
-            new webpack.ProgressPlugin()
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+            }),
         ],
         module: {
             rules: [{
-                test: /\.tsx? $/,
+                test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             }, ],
         },
         resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
+            extensions: ['.ts', '.js'],
         },
-    }
+    };
 };

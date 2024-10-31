@@ -1,45 +1,55 @@
 // Get the modal
-var modal = document.getElementById("modal");
+const modal = document.getElementById("modal") as HTMLDivElement;
 
-var openModalBtn = document.getElementById("openModalBtn");
-var closeModalBtn = document.getElementById("closeModalBtn");
+const openModalBtn = document.getElementById("openModalBtn") as HTMLButtonElement;
+const closeModalBtn = document.getElementById("closeModalBtn") as HTMLButtonElement;
 
-openModalBtn.onclick = function() {
+// Open the modal
+openModalBtn.onclick = () => {
     modal.style.display = "block";
-}
+};
 
-closeModalBtn.onclick = function() {
+// Close the modal
+closeModalBtn.onclick = () => {
     modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+window.onclick = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
+    if (target === modal) {
         modal.style.display = "none";
     }
-}
+};
 
-const phoneInput = document.getElementById('phone');
+const phoneInput = document.getElementById('phone') as HTMLInputElement;
 
+// Set initial value
 phoneInput.value = '+38';
 
-phoneInput.addEventListener('input', (e) => {
-    // Если пользователь удаляет префикс, восстановить его
-    if (!e.target.value.startsWith('+38')) {
-        e.target.value = '+38' + e.target.value.replace(/^\+38/, '');
+// Handle input event
+phoneInput.addEventListener('input', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    // If the user removes the prefix, restore it
+    if (!target.value.startsWith('+38')) {
+        target.value = '+38' + target.value.replace(/^\+38/, '');
     }
 });
 
-phoneInput.addEventListener('focus', (e) => {
-    // Если пользователь фокусируется на поле, удалите префикс для редактирования
-    if (e.target.value === '+38') {
-        e.target.value = '';
+// Handle focus event
+phoneInput.addEventListener('focus', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    // If the user focuses on the field, remove the prefix for editing
+    if (target.value === '+38') {
+        target.value = '';
     }
 });
 
-phoneInput.addEventListener('blur', (e) => {
-    // При потере фокуса, если поле пустое, вернуть префикс
-    if (!e.target.value) {
-        e.target.value = '+38';
+// Handle blur event
+phoneInput.addEventListener('blur', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    // On losing focus, if the field is empty, return the prefix
+    if (!target.value) {
+        target.value = '+38';
     }
 });

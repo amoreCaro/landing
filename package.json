@@ -1,8 +1,9 @@
 {
     "name": "landing",
     "version": "1.0.0",
-    "main": "index.js",
-
+    "main": "index.ts",
+    "target": "es6",
+    "module": "es6",
     "scripts": {
         "build:dev": "webpack --env mode=development",
         "build:prod": "webpack --env mode=production"
