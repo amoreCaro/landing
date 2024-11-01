@@ -35,11 +35,13 @@ module.exports = (env) => {
                     use: [{
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[ext]', // зберегти структуру папок
-                            outputPath: 'images/', // куди зберігати зображення
+                            name: '[name].[ext]', // зберегти назву та розширення
+                            outputPath: '/build/img', // куди зберігати зображення
+                            publicPath: '/src/img', // публічний шлях для доступу до зображень
                         },
-                    }, ],
-                },
+                    }],
+                }
+
             ],
         },
         resolve: {

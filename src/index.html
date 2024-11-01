@@ -63,61 +63,67 @@
 
 <main class="main">
     <div class="wrapper">
-        <aside class="sidebar">
-            <div class="sidebar__header ">
-                <a class="header__logo " href="# ">
-                    <img class="header__logo-img " src="img/header/rozetka__logo.svg " alt="Logo " />
-                    <div class="header-actions__item header-actions__item-language ">
-                        <div class="header__button btn h-btn-dropdown ">
-                            UA
-                            <span class="material-symbols-outlined ">keyboard_arrow_down</span>
-                        </div>
-                        <button id="closeSidebarBtn">&times;</button>
+        <div class="sidebar__overlay">
+            <div class="sidebar">
+                <aside class="sidebar__inner">
+                    <div class="sidebar__header ">
+                        <a class="header__logo " href="# ">
+                            <img class="header__logo-img " src="img/header/rozetka__logo.svg " alt="Logo " />
+                            <div class="header-actions__item header-actions__item-language ">
+                                <div class="header__button btn h-btn-dropdown ">
+                                    UA
+                                    <span class="material-symbols-outlined ">keyboard_arrow_down</span>
+                                </div>
+                                <button id="closeSidebarBtn">&times;</button>
+                            </div>
+                            <button class="header__button btn h-btn--medium h-btn--primary ">
+                    <span class="material-symbols-outlined ">grid_view</span>
+                Каталог товарів
+              </button>
+                        </a>
                     </div>
-                    <button class="header__button btn header__button--catalog h-btn--primary ">
-                        <span class="material-symbols-outlined ">grid_view</span>
-                    Каталог
-                  </button>
-                </a>
-            </div>
 
-            <ul class="sidebar__menu ">
-                <div class="user-login">
-                    <p class="user-login__caption"> Увійдіть, щоб отримувати рекомендації, персональні бонуси і знижки. </p>
-                    <button class="btn h-btn--blue h-btn--small user-login__button" type="button"> Увійдіть в особистий кабінет </button>
-                </div>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon gray-link " href="#home ">
-                        <img class="sidebar__icon " src="img/icons/cart.svg " /> Кошик
-                    </a>
-                </li>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon gray-link " href="#about ">
-                        <img class="sidebar__icon " src="img/icons/compare.svg " /> Списки порівнянь
-                    </a>
-                </li>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon gray-link " href="#services ">
-                        <img class="sidebar__icon " src="img/icons/tracking.svg " /> Відстежити посилку
-                    </a>
-                </li>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon gray-link " href="#contact ">
-                        <img class="sidebar__icon " src="img/icons/location.svg " /> Київ
-                    </a>
-                </li>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon link-green " href="#contact ">
-                        <img class="sidebar__icon " src="img/icons/chat.svg " /> Чат з Rozetka
-                    </a>
-                </li>
-                <li class="sidebar__item ">
-                    <a class="sidebar__link h-btn--with--icon gray-link " href="#contact ">
-                        <img class="sidebar__icon " src="img/icons/store.svg " /> Магазин Rozetka
-                    </a>
-                </li>
-            </ul>
-        </aside>
+                    <div class="user-login">
+                        <p class="user-login__caption"> Увійдіть, щоб отримувати рекомендації, персональні бонуси і знижки. </p>
+                        <button class="btn h-btn--blue h-btn--small user-login__button" type="button"> Увійдіть в особистий кабінет </button>
+                    </div>
+
+                    <ul class="sidebar__menu">
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon gray-link" href="#home">
+                                <span class="material-symbols-outlined">shopping_cart</span>Кошик
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon gray-link" href="#about">
+                                <span class="material-symbols-outlined">compare_arrows</span> Списки порівнянь
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon gray-link" href="#services">
+                                <span class="material-symbols-outlined icon">local_shipping</span> Відстежити посилку
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon gray-link" href="#contact">
+                                <span class="material-symbols-outlined icon">location_on</span> Київ
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon link-green" href="#contact">
+                                <span class="material-symbols-outlined icon">airplanemode_active</span> Чат з Rozetka
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link h-btn--with--icon gray-link" href="#contact">
+                                <span class="material-symbols-outlined icon">store</span> Магазин Rozetka
+                            </a>
+                        </li>
+                    </ul>
+
+                </aside>
+            </div>
+        </div>
         <div class="products-grid products--col-4 h-center ">
             <div class="product-card ">
                 <img class="product-card__favorite-icon " src="img/favorite.svg " alt="Favorite Icon " />
