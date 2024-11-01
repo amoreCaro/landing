@@ -76,10 +76,10 @@
                                 </div>
                                 <button id="closeSidebarBtn">&times;</button>
                             </div>
-                            <button class="header__button btn h-btn--medium h-btn--primary ">
-                    <span class="material-symbols-outlined ">grid_view</span>
-                Каталог товарів
-              </button>
+                            <button class="btn h-btn--medium h-btn--primary h-btn--with--icon h-sidebar__button ">
+                                    <span class="material-symbols-outlined ">grid_view</span>
+                                    Каталог товарів
+                                </button>
                         </a>
                     </div>
 
@@ -87,39 +87,111 @@
                         <p class="user-login__caption"> Увійдіть, щоб отримувати рекомендації, персональні бонуси і знижки. </p>
                         <button class="btn h-btn--blue h-btn--small user-login__button" type="button"> Увійдіть в особистий кабінет </button>
                     </div>
-
                     <ul class="sidebar__menu">
-                        <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon gray-link" href="#home">
-                                <span class="material-symbols-outlined">shopping_cart</span>Кошик
+                        <li class="sidebar__item ">
+                            <a class="sidebar__link-main h-btn--with--icon " href="#about">
+                                <span class="sidebar__item-icon material-symbols-outlined">compare_arrows</span> Списки порівнянь
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon gray-link" href="#about">
-                                <span class="material-symbols-outlined">compare_arrows</span> Списки порівнянь
+                            <a class="sidebar__link-main h-btn--with--icon " href="#services">
+                                <span class="sidebar__item-icon material-symbols-outlined icon">local_shipping</span> Відстежити посилку
+                            </a>
+                            <li class="sidebar__item">
+                                <a class="sidebar__link-main h-btn--with--icon " href="#home">
+                                    <span class="sidebar__item-icon material-symbols-outlined">shopping_cart</span>Кошик
+                                </a>
+                            </li>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-main h-btn--with--icon " href="#location">
+                                <span class="sidebar__item-icon material-symbols-outlined icon">location_on</span> Київ
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon gray-link" href="#services">
-                                <span class="material-symbols-outlined icon">local_shipping</span> Відстежити посилку
+                            <a class="sidebar__link-main h-btn--with--icon link-green active" href="#chat">
+                                <span class="sidebar__item-icon material-symbols-outlined icon">airplanemode_active</span> Чат з Rozetka
+                            </a>
+                        </li>
+
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-main h-btn--with--icon " href="#shop">
+                                <span class="sidebar__item-icon material-symbols-outlined icon">store</span> Магазин Rozetka
+                            </a>
+                        </li>
+
+                        <hr class="divider-line " />
+
+                        <li class="sidebar__item">
+                            <a class="sidebar__item--label">
+                                Інформація про компанію
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon gray-link" href="#contact">
-                                <span class="material-symbols-outlined icon">location_on</span> Київ
+                            <a class="sidebar__link-secondary">
+                                Про нас
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon link-green" href="#contact">
-                                <span class="material-symbols-outlined icon">airplanemode_active</span> Чат з Rozetka
+                            <a class="sidebar__link-secondary">
+                                Умови використання сайту
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a class="sidebar__link h-btn--with--icon gray-link" href="#contact">
-                                <span class="material-symbols-outlined icon">store</span> Магазин Rozetka
+                            <a class="sidebar__link-secondary">
+                                Вакансії
                             </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Контакти
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Всі категорії
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                ROZETKA.PL 
+                            </a>
+                        </li>
+                        <hr class="divider-line " />
+
+                        <li class="sidebar__item">
+                            <a class="sidebar__item--label">
+                                Допомога
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Доставка та оплата
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Кредит
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Гарантія
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Повернення товару
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link-secondary">
+                                Сервісні центри
+                             </a>
                         </li>
                     </ul>
+
+
 
                 </aside>
             </div>
@@ -322,7 +394,7 @@
 </div>
 
 
-<script src="src/index.js" defer></script>
+<script src="src/index.js " defer></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script> -->
 </body>
 
