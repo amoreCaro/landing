@@ -8,6 +8,27 @@ const modal = document.getElementById("modal") as HTMLDivElement | null;
 const openModalBtn = document.getElementById("openModalBtn") as HTMLButtonElement | null;
 const closeModalBtn = document.getElementById("closeModalBtn") as HTMLButtonElement | null;
 
+const catalogButton = document.getElementById('catalogButton') as HTMLButtonElement;
+const megaMenu = document.getElementById('megaMenu') as HTMLDivElement;
+
+// Show the mega menu when the button is clicked
+catalogButton.addEventListener('click', () => {
+    // Toggle visibility of the mega menu
+    if (megaMenu.style.display === 'none' || megaMenu.style.display === '') {
+        megaMenu.style.display = 'block';
+    } else {
+        megaMenu.style.display = 'none';
+    }
+});
+
+// Optional: Hide the mega menu if clicked outside of it
+window.addEventListener('click', (event) => {
+    if (event.target !== catalogButton && !megaMenu.contains(event.target as Node)) {
+        megaMenu.style.display = 'none';
+    }
+});
+
+
 if (openSidebarBtn && sidebar) {
     openSidebarBtn.addEventListener("click", () => {
         sidebar.style.width = "250px";
