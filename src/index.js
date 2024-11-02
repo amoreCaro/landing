@@ -82,8 +82,6 @@ window.onclick = function(event) {
     }
 };
 
-
-
 const phoneInput = document.getElementById('phone');
 
 phoneInput.value = '+38';
