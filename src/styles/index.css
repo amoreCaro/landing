@@ -139,6 +139,28 @@
         color: var(--accent-hover-color);
     }
     
+    .close-button {
+        background-color: transparent;
+        /* Transparent background */
+        border: none;
+        /* No border */
+        color: #333;
+        /* Text color */
+        font-size: 24px;
+        /* Font size for the icon */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        padding: 10px;
+        /* Padding around the icon */
+        transition: color 0.3s ease;
+        /* Smooth color transition */
+    }
+    
+    .close-button:hover {
+        color: #ff0000;
+        /* Change color on hover */
+    }
+    
     .side-menu__button-container {
         width: 100%;
         /* Ensure the container takes full width */
@@ -547,7 +569,13 @@
     }
     
     .sidebar__header {
+        padding: 8px;
         display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--dark-bg);
     }
     
     .sidebar__menu {
