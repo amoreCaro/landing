@@ -338,7 +338,6 @@ body {
 /* mega menu */
 
 .mega-menu {
-    display: none;
     position: relative;
 }
 
@@ -367,8 +366,25 @@ body {
     text-decoration: none;
 }
 
+.menu-link__content {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.mega-menu__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .mega-menu__link:hover {
     color: var(--accent-hover-color);
+}
+
+.menu-link__icon {
+    margin-right: 8px;
 }
 
 .mega-menu__title {
