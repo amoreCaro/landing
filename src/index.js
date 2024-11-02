@@ -83,38 +83,28 @@ window.onclick = function(event) {
 };
 
 
-// // Function to toggle the mega menu
-// function toggleMegaMenuDisplay() {
-//     if (megaMenu.style.display === "block") {
-//         megaMenu.style.display = "none";
-//     } else {
-//         megaMenu.style.display = "block";
-//     }
-// }
 
+const phoneInput = document.getElementById('phone');
 
+phoneInput.value = '+38';
 
-// const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', (e) => {
+    // Если пользователь удаляет префикс, восстановить его
+    if (!e.target.value.startsWith('+38')) {
+        e.target.value = '+38' + e.target.value.replace(/^\+38/, '');
+    }
+});
 
-// phoneInput.value = '+38';
+phoneInput.addEventListener('focus', (e) => {
+    // Если пользователь фокусируется на поле, удалите префикс для редактирования
+    if (e.target.value === '+38') {
+        e.target.value = '';
+    }
+});
 
-// phoneInput.addEventListener('input', (e) => {
-//     // Если пользователь удаляет префикс, восстановить его
-//     if (!e.target.value.startsWith('+38')) {
-//         e.target.value = '+38' + e.target.value.replace(/^\+38/, '');
-//     }
-// });
-
-// phoneInput.addEventListener('focus', (e) => {
-//     // Если пользователь фокусируется на поле, удалите префикс для редактирования
-//     if (e.target.value === '+38') {
-//         e.target.value = '';
-//     }
-// });
-
-// phoneInput.addEventListener('blur', (e) => {
-//     // При потере фокуса, если поле пустое, вернуть префикс
-//     if (!e.target.value) {
-//         e.target.value = '+38';
-//     }
-// });
+phoneInput.addEventListener('blur', (e) => {
+    // При потере фокуса, если поле пустое, вернуть префикс
+    if (!e.target.value) {
+        e.target.value = '+38';
+    }
+});
