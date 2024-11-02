@@ -11,6 +11,8 @@ var closeSidebarBtn = document.getElementById("closeSidebarBtn");
 var megaMenu = document.getElementById("megaMenu");
 var toggleMegaMenu = document.getElementById("openMegaMenu");
 
+const phoneInput = document.getElementById('phone');
+
 // When the user clicks the button, open the modal 
 openModalBtn.onclick = function() {
     modal.style.display = "block";
@@ -36,12 +38,7 @@ closeSidebarBtn.onclick = function() {
     sidebar.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        sidebar.style.display = "none";
-    }
-}
+
 
 // Function to open and close the modal
 function toggleModal() {
@@ -51,7 +48,6 @@ function toggleModal() {
         modal.style.display = "block";
     }
 }
-
 // Function to toggle the mega menu
 function toggleMegaMenuDisplay() {
     if (megaMenu.style.display === "block") {
@@ -60,6 +56,14 @@ function toggleMegaMenuDisplay() {
         megaMenu.style.display = "block"; // Open mega menu
     }
 }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == sidebar) {
+        sidebar.style.display = "none";
+    }
+}
+
+
 
 // Event listeners for modal
 if (openModalBtn) {
@@ -82,7 +86,7 @@ window.onclick = function(event) {
     }
 };
 
-const phoneInput = document.getElementById('phone');
+
 
 phoneInput.value = '+38';
 

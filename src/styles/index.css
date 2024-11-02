@@ -187,6 +187,7 @@
         transition: background-color 0.3s;
         /* Smooth transition for hover */
         gap: 8px;
+        margin-bottom: 12px;
     }
     /* price helpers */
     /* price colors */
@@ -574,8 +575,20 @@
         flex-direction: row;
         flex-shrink: 0;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         background-color: var(--dark-bg);
+    }
+    
+    .sidebar-actions__item {
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        align-items: center;
+    }
+    
+    .sidebar-logo {
+        max-width: 144px;
+        height: 50px;
     }
     
     .sidebar__menu {
@@ -592,12 +605,12 @@
         box-sizing: border-box;
     }
     
-    .sidebar__item-icon {
-        margin-right: 8px;
-    }
-    
     .sidebar__item {
         margin-bottom: 15px;
+    }
+    
+    .sidebar__item-icon {
+        margin-right: 8px;
     }
     
     .sidebar__link-main {
@@ -769,7 +782,7 @@
     @media (max-width: 1280px) {
         .header__logo-img {
             max-height: 50px;
-            content: url("/src/img/header/mini-logo.svg");
+            content: url("../img/header/mini-logo.svg");
         }
     }
     
