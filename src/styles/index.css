@@ -142,6 +142,34 @@ body {
     transition: ease-in-out 0.5s;
 }
 
+.side-menu__button-container {
+    width: 100%;
+    /* Ensure the container takes full width */
+}
+
+.side-menu__button_catalog {
+    width: 100%;
+    /* Button takes full width of the container */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    padding: 12px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+    /* Text color */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover */
+    gap: 8px;
+}
+
 
 /* price helpers */
 
@@ -299,6 +327,42 @@ body {
     height: 1px;
     background-color: var(--divider-color, #cccccc);
     width: 100%;
+}
+
+
+/* mega menu */
+
+.mega-menu {
+    position: relative;
+}
+
+.mega-menu__content {
+    padding: 20px;
+    background-color: #ccc;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.mega-menu__row {
+    display: flex;
+}
+
+.mega-menu__column {
+    padding: 10px;
+    background-color: #ccc;
+    flex: 1;
+}
+
+.mega-menu__column a {
+    display: block;
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+.mega-menu__column a:hover {
+    background-color: #ddd;
 }
 
 
@@ -474,6 +538,14 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.h-sidebar__button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 .sidebar__item-icon {
