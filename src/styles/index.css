@@ -357,6 +357,27 @@ body {
 }
 
 
+/* slider */
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+    /* Hide all images initially */
+}
+
+img.displaySlide {
+    display: block;
+    /* Show the active slide */
+}
+
+
 /* divider */
 
 .divider {
