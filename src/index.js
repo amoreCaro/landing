@@ -7,6 +7,7 @@ var closeModalBtn = document.getElementById("closeModalBtn");
 var sidebar = document.getElementById("sidebar");
 var openSidebarBtn = document.getElementById("openSidebarBtn");
 var closeSidebarBtn = document.getElementById("closeSidebarBtn");
+
 // mega-menu variables
 var megaMenu = document.getElementById("megaMenu");
 var toggleMegaMenu = document.getElementById("openMegaMenu");
@@ -29,7 +30,7 @@ window.onclick = function(event) {
     }
 }
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the sidebar 
 openSidebarBtn.onclick = function() {
     sidebar.style.display = "block";
 }
@@ -37,8 +38,6 @@ openSidebarBtn.onclick = function() {
 closeSidebarBtn.onclick = function() {
     sidebar.style.display = "none";
 }
-
-
 
 // Function to open and close the modal
 function toggleModal() {
@@ -48,6 +47,7 @@ function toggleModal() {
         modal.style.display = "block";
     }
 }
+
 // Function to toggle the mega menu
 function toggleMegaMenuDisplay() {
     if (megaMenu.style.display === "block") {
@@ -56,14 +56,13 @@ function toggleMegaMenuDisplay() {
         megaMenu.style.display = "block"; // Open mega menu
     }
 }
-// When the user clicks anywhere outside of the modal, close it
+
+// When the user clicks anywhere outside of the sidebar, close it
 window.onclick = function(event) {
     if (event.target == sidebar) {
         sidebar.style.display = "none";
     }
 }
-
-
 
 // Event listeners for modal
 if (openModalBtn) {
@@ -86,27 +85,27 @@ window.onclick = function(event) {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.getElementById('phone');
+    const prefix = '+38';
 
+    // Set the initial value with the prefix
+    phoneInput.value = prefix;
 
-phoneInput.value = '+38';
+    // Add an event listener to handle input
+    phoneInput.addEventListener('input', (event) => {
+        // If the value starts with the prefix, keep only the number
+        if (phoneInput.value.startsWith(prefix)) {
+            // Allow input of only the number without the prefix
+            phoneInput.value = prefix + phoneInput.value.slice(prefix.length).replace(/[^0-9]/g, '');
+        } else {
+            // If the prefix is removed, restore it
+            phoneInput.value = prefix;
+        }
+    });
 
-phoneInput.addEventListener('input', (e) => {
-    // Если пользователь удаляет префикс, восстановить его
-    if (!e.target.value.startsWith('+38')) {
-        e.target.value = '+38' + e.target.value.replace(/^\+38/, '');
-    }
-});
-
-phoneInput.addEventListener('focus', (e) => {
-    // Если пользователь фокусируется на поле, удалите префикс для редактирования
-    if (e.target.value === '+38') {
-        e.target.value = '';
-    }
-});
-
-phoneInput.addEventListener('blur', (e) => {
-    // При потере фокуса, если поле пустое, вернуть префикс
-    if (!e.target.value) {
-        e.target.value = '+38';
-    }
+    // Prevent removing the prefix on focus
+    phoneInput.addEventListener('focus', () => {
+        phoneInput.setSelectionRange(prefix.length, prefix.length);
+    });
 });
