@@ -781,50 +781,48 @@ body {
     margin-right: 2px;
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* centering all blocks */
+    padding: 0 20px;
+    /* Default padding */
+}
 
-/* Responsive adjustments */
 
-@media (max-width: 1200px) {
-    .product-card {
-        flex: 1 1 calc(100% / 5 - 16px);
-        /* 5 columns */
+/* Combined media queries for .wrapper */
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 0 10px;
+        /* Smaller padding for small screens */
     }
 }
 
-@media (max-width: 992px) {
-    .product-card {
-        flex: 1 1 calc(100% / 4 - 16px);
-        /* 4 columns */
+@media (min-width: 601px) and (max-width: 900px) {
+    .wrapper {
+        padding: 0 15px;
+        /* Medium padding for medium screens */
     }
 }
 
-@media (max-width: 768px) {
-    .product-card {
-        flex: 1 1 calc(100% / 3 - 16px);
-        /* 3 columns */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .wrapper {
+        padding: 0 20px;
+        /* Default padding for larger screens */
     }
 }
 
-@media (max-width: 585px) {
-    .product-card {
-        flex: 1 1 calc(100% / 2 - 16px);
-        /* 2 columns */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .wrapper {
+        padding: 0 30px;
+        /* More padding for larger screens */
     }
 }
 
-@media (max-width: 576px) {
-    .product-card {
-        flex: 1 1 100%;
-        /* 1 column */
-    }
-}
 
-@media (max-width: 400px) {
-    .product-card {
-        flex: 1 1 100%;
-        /* 1 column */
-    }
-}
+/* Header adjustments */
 
 @media (max-width: 1280px) {
     .header__logo-img {
@@ -834,23 +832,22 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .header__button--catalog {
-        display: none;
-    }
+    .header__button--catalog,
     .header-actions__item-language {
         display: none;
+        /* Hide buttons */
     }
 }
 
 @media (max-width: 768px) {
-    .header__search-button {
-        display: none;
-    }
+    .header__search-button,
     .btn-icon--account {
         display: none;
+        /* Hide buttons */
     }
     .header {
         padding: 0 5px;
+        /* Adjust header padding */
     }
     .header__menu {
         margin-right: 10px;
@@ -869,5 +866,29 @@ body {
     }
     .header__button {
         margin-right: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Для 3 колонок */
+    .products--col-3 .product-card {
+        max-width: calc(33.33% - 20px);
+        /* 3 items per row */
+    }
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+    /* Для 2 колонок */
+    .products--col-2 .product-card {
+        max-width: calc(50% - 20px);
+        /* 2 items per row */
+    }
+}
+
+@media (max-width: 649px) {
+    /* Для 1 колонки */
+    .products--col-1 .product-card {
+        max-width: 100%;
+        /* 1 item per row */
     }
 }
