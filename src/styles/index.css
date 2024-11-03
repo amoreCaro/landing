@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
- :root {
+:root {
     --text-color: #ffffff;
     --white-bg: #f5f5f5;
     --dark-bg: #221f1f;
@@ -247,9 +247,11 @@ body {
     background-color: var(--dark-bg);
     width: 100%;
     position: relative;
+    justify-content: center;
 }
 
 .layout {
+    max-width: 1440px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -709,18 +711,43 @@ body {
 /* Products */
 
 .products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    grid-template: repeat(4, 1fr);
     align-items: flex-start;
-    height: 100vh;
+    gap: 16px;
 }
 
-.products--col-4 .product-card {
-    max-width: 24%;
+.products--col-4 {
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
 }
 
-.products--col-4 .product-card {
+@media (min-width: 1025px) {
+    .products--col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .products--col-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 568px) {
+    .products--col-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products--col-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-card {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -866,29 +893,5 @@ body {
     }
     .header__button {
         margin-right: 10px;
-    }
-}
-
-@media (min-width: 768px) {
-    /* Для 3 колонок */
-    .products--col-3 .product-card {
-        max-width: calc(33.33% - 20px);
-        /* 3 items per row */
-    }
-}
-
-@media (min-width: 650px) and (max-width: 767px) {
-    /* Для 2 колонок */
-    .products--col-2 .product-card {
-        max-width: calc(50% - 20px);
-        /* 2 items per row */
-    }
-}
-
-@media (max-width: 649px) {
-    /* Для 1 колонки */
-    .products--col-1 .product-card {
-        max-width: 100%;
-        /* 1 item per row */
     }
 }
