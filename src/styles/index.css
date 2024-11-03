@@ -12,6 +12,7 @@
     --search-icon-color: #545252;
     --yellow-color: #ffa900;
     --link-color: #3e77aa;
+    --link-color-hover: #31a3db;
     --accent-hover-color: #00bd52;
     --link-hover-color: #ff7878;
     --color-red: #f84147;
@@ -49,8 +50,6 @@ body {
 .h--white-icon {
     color: var(--text-color);
 }
-
-.h--white-icon:hover {}
 
 .h--gray-icon {
     color: var(--icon-color);
@@ -143,6 +142,10 @@ body {
 .h-btn--blue {
     background-color: var(--link-color);
     color: var(--white-bg);
+}
+
+.h-btn--blue:hover {
+    background-color: var(--link-color-hover);
 }
 
 .h-btn--link {
@@ -268,6 +271,18 @@ body {
 
 .h--icon-bg:hover {
     background-color: var(--hover-bg);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header__logo {
@@ -575,18 +590,6 @@ body {
 
 /* Sidebar */
 
-.sidebar__overlay {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
 .sidebar {
     max-width: 320px;
     background: var(--text-color);
@@ -725,6 +728,10 @@ body {
     border-radius: 8px;
     padding: 16px;
     position: relative;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-card__content {
