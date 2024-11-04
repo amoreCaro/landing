@@ -1,18 +1,65 @@
-// modal variables
-var modal = document.getElementById("modal");
-var openModalBtn = document.getElementById("openModalBtn");
-var closeModalBtn = document.getElementById("closeModalBtn");
+function setupModal(modalId, openBtnId, closeBtnId) {
+    const modal = document.getElementById(modalId);
+    const openModalBtn = document.getElementById(openBtnId);
+    const closeModalBtn = document.getElementById(closeBtnId);
 
-// sidebar variables
-var sidebar = document.getElementById("sidebar");
-var openSidebarBtn = document.getElementById("openSidebarBtn");
-var closeSidebarBtn = document.getElementById("closeSidebarBtn");
+    openModalBtn.onclick = () => {
+        modal.style.display = "block";
+    };
 
-// mega-menu variables
-var megaMenu = document.getElementById("megaMenu");
-var toggleMegaMenu = document.getElementById("openMegaMenu");
-// phone variables
-const phoneInput = document.getElementById('phone');
+    closeModalBtn.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+setupModal("modal", "openModalBtn", "closeModalBtn");
+
+// mega menu
+function setupMegaMenu(menuId, toggleBtnId) {
+    const megaMenu = document.getElementById(menuId);
+    const toggleMegaMenu = document.getElementById(toggleBtnId);
+
+    // Function to toggle the mega menu
+    function toggleMegaMenuDisplay() {
+        megaMenu.style.display = megaMenu.style.display === "block" ? "none" : "block";
+    }
+
+    // Event listener for the toggle button
+    toggleMegaMenu.onclick = toggleMegaMenuDisplay;
+}
+
+// Initialize the mega menu with specific IDs
+setupMegaMenu("megaMenu", "openMegaMenu");
+
+//sidebar
+function setupSidebar(sidebarId, openBtnId, closeBtnId) {
+    const sidebar = document.getElementById(sidebarId);
+    const openSidebarBtn = document.getElementById(openBtnId);
+    const closeSidebarBtn = document.getElementById(closeBtnId);
+
+    openSidebarBtn.onclick = () => {
+        sidebar.style.display = "block";
+    };
+
+    closeSidebarBtn.onclick = () => {
+        sidebar.style.display = "none";
+    };
+
+    window.onclick = (event) => {
+        if (event.target === sidebar) {
+            sidebar.style.display = "none";
+        }
+    };
+}
+
+// Initialize the sidebar with specific IDs
+setupSidebar("sidebar", "openSidebarBtn", "closeSidebarBtn");
+
 
 // slider variables
 const slides = document.querySelectorAll(".slides img");
@@ -49,76 +96,8 @@ function nextSlide() {
     showSlide(slideIndex);
 }
 
-// When the user clicks the button, open the modal 
-openModalBtn.onclick = function() {
-    modal.style.display = "block";
-}
-
-closeModalBtn.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// When the user clicks the button, open the sidebar 
-openSidebarBtn.onclick = function() {
-    sidebar.style.display = "block";
-}
-
-closeSidebarBtn.onclick = function() {
-    sidebar.style.display = "none";
-}
-
-// Function to open and close the modal
-function toggleModal() {
-    if (modal.style.display === "block") {
-        modal.style.display = "none";
-    } else {
-        modal.style.display = "block";
-    }
-}
-
-// Function to toggle the mega menu
-function toggleMegaMenuDisplay() {
-    if (megaMenu.style.display === "block") {
-        megaMenu.style.display = "none"; // Close mega menu
-    } else {
-        megaMenu.style.display = "block"; // Open mega menu
-    }
-}
-
-// When the user clicks anywhere outside of the sidebar, close it
-window.onclick = function(event) {
-    if (event.target == sidebar) {
-        sidebar.style.display = "none";
-    }
-}
-
-// Event listeners for modal
-if (openModalBtn) {
-    openModalBtn.onclick = toggleModal; // Toggle modal on button click
-}
-
-if (closeModalBtn) {
-    closeModalBtn.onclick = toggleModal; // Close modal on close button click
-}
-
-// Event listener for mega menu toggle
-if (toggleMegaMenu) {
-    toggleMegaMenu.onclick = toggleMegaMenuDisplay; // Toggle mega menu on button click
-}
-
-// Close the modal when clicking outside of it
-window.onclick = function(event) {
-    if (event.target === modal) {
-        toggleModal(); // Use the toggle function to close the modal
-    }
-};
+// phone variables
+const phoneInput = document.getElementById('phone');
 
 document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = document.getElementById('phone');
