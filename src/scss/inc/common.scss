@@ -1,0 +1,63 @@
+@import "vars";
+@import "media";
+body {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.layout {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 24px;
+}
+
+
+/* Combined media queries for .wrapper */
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 0 10px;
+        /* Smaller padding for small screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .wrapper {
+        padding: 0 15px;
+        /* Medium padding for medium screens */
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .wrapper {
+        padding: 0 20px;
+        /* Default padding for larger screens */
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .wrapper {
+        padding: 0 30px;
+        /* More padding for larger screens */
+    }
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+}

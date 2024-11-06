@@ -1,0 +1,122 @@
+<!-- <% var data = { title: "Index" }; %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+
+<main class="page__main">
+  <div class="container">
+    <ul id="site-nav">
+    <%[
+      {
+        href: "home.html",
+        name: "Home",
+      },
+      {
+        href: "meet-the-team.html",
+        name: "Meet the Team",
+      },
+      {
+        href: "get-in-touch.html",
+        name: "Get in touch",
+      },  
+      {
+        href: "terms-of-use.html",
+        name: "Terms of Use",
+      },  
+      {
+        href: "privacy-policy.html",
+        name: "Privacy Policy",
+      },  
+    ].forEach(function(page){%>
+      <li>
+        <a href="<%=page.href%>"><%=page.name%></a>
+      </li>
+    <%})%>
+    </ul>
+  </div>
+</main>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
+
+ -->
+
+<% var data = { title: "Home" }; %>
+    <%=_.template(require('./../includes/header.html').default)(data) %>
+
+        <main class="page__main">
+            <%= _.template(require('./../includes/products.html').default)({
+
+  }) %>
+
+                <%= _.template(require('./../includes/slider.html').default)({
+    additionalClass: "section-left overlay white-text",
+    paddingClass: "small-padding",
+    id: "playbook",
+    background: "linear-gradient(180deg, #32FFB8 0%, #000 100%)",
+    image: "img/playersmarket.png",
+    text: `
+      <h3>Buy the player, not the game</h3>
+      <p>At playbook we are re-imagining fantasy sports. Each week you can buy or short the performance of your favorite athletes like Wall Street markets. Ride or Fade your friends' picks in a single click. It's that simple.</p>
+    `,
+    logo: "img/playbook-logo.png",
+    btn: {
+      text: "Visit Site",
+      link: "https://www.playbooksports.us",
+      class: "btn--green",
+    },
+  }) %>
+
+                    <%= _.template(require('./../includes/info-block.html').default)({
+    additionalClass: "section-left white-text",
+    paddingClass: "large-padding",
+    id: "meVu",
+    backgroundImage: "img/MEvu.jpg",
+    text: `
+      <h3>Play for Fun, Win for Real</h3>
+      <p>We provide a selection of online casino-style games based on Roulette, Blackjack, Poker, Table Games and Big Jackpot slots.</p>
+    `,
+    logo: "img/mevu-logo.png",
+    btn: {
+      text: "Visit Site",
+      link: "https://mevu.com/",
+      class: "btn--orange",
+    },
+  }) %>
+
+                        <%= _.template(require('./../includes/info-block.html').default)({
+    additionalClass: "section-center black-text",
+    paddingClass: "small-padding",
+    id: "draftMillionaires",
+    background: "linear-gradient(180deg, #FFFBEF 0%, #FFECAF 51.3%, #FFE9A8 100%)",
+    logo: "img/draft-millioners.png",
+    text: `
+      <h3>Connecting Fans to Superstar Athletes</h3>
+      <p>Engage with your favorite athletes through exclusive content and interactive experiences. Join us for live Q&A sessions, personalized messages, and behind-the-scenes access, bringing you closer to the sports icons you admire.</p>
+    `,
+    btn: {
+      text: "Coming Soon",
+      link: "#",
+      class: "btn--gold",
+      disabled: true,
+    },
+  }) %>
+
+                            <%= _.template(require('./../includes/info-block.html').default)({
+    additionalClass: "section-left white-text",
+    paddingClass: "small-padding",
+    id: "about",
+    backgroundImage: "img/AboutUs.jpg",
+    text: `
+      <h2>About Us</h2>
+      <p>We’re a team of geeks, professional athletes, venture capital guys and fans that love sports betting and fantasy sports.  Moneyline Sports, Inc., a Nevada corporation with its corporate office in New York City, is a leading provider of next generation predictive sorts analytics and data products for US sports including NFL, NBA, MLB, and NCAA.</p>
+      <p>At Moneyline Sports, we believe in MATH, NOT Intuition. Our mission is to provide sports fans and bettors exceptional data tools to better forecast the outcomes of professional athletic matches.</p>
+    `,
+    btn: {
+      text: "Meet the Team",
+      link: "/meet-the-team.html",
+      class: "btn--black",
+    },
+  }) %>
+
+                                <%= _.template(require('./../includes/to-up-btn.html').default)({partners: true}) %>
+        </main>
+
+        <%= _.template(require('./../includes/footer.html').default)(data) %>
