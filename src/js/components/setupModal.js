@@ -1,4 +1,4 @@
-function setupModal(modalId, openBtnId, closeBtnId) {
+export function setupModal(modalId, openBtnId, closeBtnId) {
     const modal = document.getElementById(modalId);
     const openModalBtn = document.getElementById(openBtnId);
     const closeModalBtn = document.getElementById(closeBtnId);
@@ -18,5 +18,3 @@ function setupModal(modalId, openBtnId, closeBtnId) {
     };
 }
 setupModal("modal", "openModalBtn", "closeModalBtn");
-
-export default setupModal;

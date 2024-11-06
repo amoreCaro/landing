@@ -1,4 +1,4 @@
-function setupMegaMenu(menuId, toggleBtnId) {
+export function setupMegaMenu(menuId, toggleBtnId) {
     const megaMenu = document.getElementById(menuId);
     const toggleMegaMenu = document.getElementById(toggleBtnId);
 
@@ -17,6 +17,3 @@ function setupMegaMenu(menuId, toggleBtnId) {
 
 // Initialize the mega menu with specific IDs
 setupMegaMenu("megaMenu", "openMegaMenu");
-
-// Export the function as the default export
-export default setupMegaMenu;

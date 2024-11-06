@@ -25,6 +25,7 @@ const htmlPlugins = generateHtmlPlugins("./src/html/views");
 const config = {
     entry: ["./src/js/index.js", "./src/scss/style.scss"],
     output: {
+        path: path.resolve(__dirname, 'dist'),
         filename: "./js/bundle.js",
     },
     devtool: "source-map",
@@ -36,6 +37,9 @@ const config = {
                 extractComments: true,
             }),
         ],
+    },
+    stats: {
+        children: true,
     },
     module: {
         rules: [
@@ -57,20 +61,7 @@ const config = {
                     {
                         loader: "postcss-loader",
                         options: {
-                            ident: "postcss",
                             sourceMap: true,
-                            plugins: () => [
-                                require("cssnano")({
-                                    preset: [
-                                        "default",
-                                        {
-                                            discardComments: {
-                                                removeAll: true,
-                                            },
-                                        },
-                                    ],
-                                }),
-                            ],
                         },
                     },
                     {
@@ -101,30 +92,6 @@ const config = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "./css/style.bundle.css",
-        }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: "./src/fonts",
-                    to: "./fonts",
-                },
-                {
-                    from: "./src/favicon",
-                    to: "./favicon",
-                },
-                {
-                    from: "./src/img",
-                    to: "./img",
-                },
-                {
-                    from: "./src/video",
-                    to: "./video",
-                },
-                {
-                    from: "./static/robots.txt",
-                    to: "./",
-                },
-            ],
         }),
     ].concat(htmlPlugins),
 };
