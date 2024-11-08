@@ -1,0 +1,119 @@
+/* mega menu */
+
+.mega-menu {
+    display: none;
+    position: relative;
+}
+
+.mega-menu__inner {
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: row;
+    /* Stack elements vertically */
+    /* align-items: center; */
+    /* Center horizontally */
+    justify-content: space-around;
+    /* Center vertically */
+    text-align: center;
+    /* Center text within the columns */
+    padding: 20px;
+}
+
+
+/* Container styling for the menu categories */
+
+.menu-categories {
+    max-width: 300px;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between each item */
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Each item in the menu-categories */
+
+.menu-categories_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+
+/* Link styling inside each item */
+
+.menu-categories_link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 15px;
+    white-space: nowrap;
+    color: var(--dark-bg);
+}
+
+.mega-menu__arrow {
+    margin-left: auto;
+    color: var(--dark-bg);
+    /* Color for the arrow */
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.menu-categories_link:hover {
+    color: var(--accent-hover-color);
+}
+
+
+/* Icon and text layout */
+
+.menu-link__content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-categories_item:hover .mega-menu__arrow {
+    color: var(--accent-hover-color);
+}
+
+.mega-menu__hidden-content {
+    grid-gap: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.mega-menu__column {
+    text-align: left;
+}
+
+.mega-menu__column-title {
+    color: var(--icon-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.mega-menu__column-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu__column-list-item {
+    margin-bottom: 8px;
+}
+
+.mega-menu__column-link {
+    text-decoration: none;
+    color: inherit;
+    align-items: left;
+}
+
+.mega-menu__column-link:hover {
+    color: var(--accent-hover-color);
+    text-decoration: underline;
+}
