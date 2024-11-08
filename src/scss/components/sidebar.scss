@@ -1,0 +1,118 @@
+@import "../inc/helpers.scss";
+
+/* Sidebar */
+
+.sidebar {
+    max-width: 320px;
+    background: $text-color;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar__inner {
+    margin: 20px;
+}
+
+.sidebar__header {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $dark-bg;
+}
+
+.sidebar-actions__item {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.sidebar-logo {
+    max-width: 144px;
+    height: 50px;
+}
+
+.sidebar__menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.h-sidebar__button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.sidebar__item {
+    margin-bottom: 15px;
+}
+
+.sidebar__item-icon {
+    margin-right: 8px;
+}
+
+.sidebar__link-main {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    color: $dark-bg;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.sidebar__link-main:hover {
+    color: $accent-hover-color;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar__link-main.active {
+    color: $accent-color;
+}
+
+.sidebar__item--label {
+    font-size: 14px;
+    color: $icon-color;
+}
+
+.sidebar__link-secondary {
+    font-size: 14px;
+    color: $dark-bg;
+}
+
+.sidebar__link-secondary:hover {
+    text-decoration: underline;
+}
+
+
+/* user-login */
+
+.user-login {
+    padding: 16px;
+    background-color: $white-bg;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-login__caption {
+    color: $dark-bg;
+    margin-bottom: 16px;
+    font-size: 12px;
+}
