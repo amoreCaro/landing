@@ -1,0 +1,115 @@
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 0 10px;
+    background-color: var(--dark-bg);
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        &__menu {
+            margin-right: 20px;
+        }
+    }
+    &__logo {
+        margin-right: 35px;
+        &-img {
+            max-height: 80px;
+        }
+    }
+    &__button--catalog {
+        color: var(--text-color);
+        background-color: var(--search-icon-color);
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s;
+        &:hover {
+            background-color: var(--light-hover-bg);
+        }
+    }
+    &-search {
+        flex-grow: 1;
+        margin: 0 20px;
+        &__container {
+            display: flex;
+            align-items: center;
+            background-color: var(--text-color);
+            flex-grow: 1;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        &__icon-container {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+        }
+        &__input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+            background-color: transparent;
+            color: var(--placeholder-color);
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+        border: none;
+        &--submit {
+            border-radius: 0 3px 3px 0;
+        }
+    }
+}
+
+
+/* Header Adjustments */
+
+@media (max-width: 1280px) {
+    .header__logo-img {
+        max-height: 50px;
+        content: url("../img/header/mini-logo.svg");
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__button--catalog,
+    .header-actions__item-language {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__search-button,
+    .btn-icon--account {
+        display: none;
+    }
+    .header {
+        padding: 0 5px;
+        &__wrapper__menu {
+            margin-right: 10px;
+        }
+        &__icon-wrapper {
+            padding: 8px;
+        }
+        &__logo {
+            margin-right: 20px;
+        }
+        &-search {
+            margin: 0 10px;
+            &__container {
+                margin-right: 10px;
+            }
+        }
+        &__button {
+            margin-right: 10px;
+        }
+    }
+}
