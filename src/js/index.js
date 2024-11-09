@@ -1,4 +1,3 @@
-import setupModal from "./components/setupModal";
 import slider from "./components/slider";
 import sidebar from "./components/sidebar";
 import setupMegaMenu from "./components/setupMegaMenu";
@@ -10,4 +9,4 @@ document.addEventListener("DOMContentLoaded", function() {
     sidebar();
     setupMegaMenu();
     phoneInput();
-});
+})
